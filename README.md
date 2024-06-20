@@ -1,10 +1,11 @@
 ## Transformer Conformal Prediction for Time Series
 
-This repository contains codes for implementing models and reproducing the results in the following [paper](https://arxiv.org/abs/2406.05332):
+This repository contains codes for implementing models and reproducing the results in the following paper:
 
-    Transformer Conformal Prediction for Time Series
+    [Transformer Conformal Prediction for Time Series](https://arxiv.org/abs/2406.05332)
         Junghwan Lee, Chen Xu, and Yao Xie
-        ICML 2024 Workshop on Structured Probabilistic Inference & Generative Modeling, https://arxiv.org/abs/2406.05332
+        ICML 2024 Workshop on Structured Probabilistic Inference & Generative Modeling
+        [https://arxiv.org/abs/2406.05332](https://arxiv.org/abs/2406.05332)
 
 ### Installation
 The codes were written in Python 3.9.13. If you want to implement locally,
