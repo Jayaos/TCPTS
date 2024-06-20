@@ -451,7 +451,7 @@ class SPCI_and_EnbPI():
         print("saving the results...")
         save_data(saving, output_list)
 
-    def compute_onlinte_QGPT_SPCI_single_training(self, saving_dir, stride, past_window, target_quantiles,
+    def compute_online_QGPT_SPCI_single_training(self, saving_dir, stride, past_window, target_quantiles,
                                                dim_model, num_head, dim_ff, num_layers, dropout, max_epoch, 
                                                additional_training_epoch, batch_size, learning_rate, early_stop, 
                                                standardize=False):

@@ -182,3 +182,34 @@ def plot_QGPT_results(saving_dir, interval_center, Y_predict, output_list, past_
         plt.legend(bbox_to_anchor=(1, -0.05), fancybox=True, shadow=True, ncol=2, fontsize=12)
         plt.title("SPCI-T", fontsize=20)
         plt.savefig(saving, bbox_inches = 'tight',pad_inches = 0.0)
+
+def compute_quantile_loss(outputs: torch.Tensor, targets: torch.Tensor, desired_quantiles: torch.Tensor) -> torch.Tensor:
+    """
+    This function compute the quantile loss a.k.a. pinball loss separately per each sample, time-step, and quantile.
+
+    Parameters
+    ----------
+    outputs: torch.Tensor
+        The outputs of the model (num_prediction_step * batch_size * num_quantiles)
+    targets: torch.Tensor
+        The observed target for each horizon (num_prediction_step * batch_size)
+    desired_quantiles: torch.Tensor
+        A tensor representing the desired quantiles, of shape (num_quantiles)
+
+    Returns
+    -------
+    losses_array: torch.Tensor
+        a tensor [num_samples x num_horizons x num_quantiles] containing the quantile loss for each sample,time-step and
+        quantile.
+    """
+
+    # compute the actual error between the observed target and each predicted quantile
+    # TODO: consider mask in resid_y 
+    # errors = targets.reshape((targets.size()[0]*targets.size()[1],1)) - outputs.reshape((outputs.size()[0]*outputs.size()[1],outputs.size()[2])) 
+    errors = targets.unsqueeze(-1) - outputs # (num_samples * num_time_steps * num_quantiles)
+
+    # compute the loss separately for each sample,time-step,quantile
+    losses_array = torch.max((desired_quantiles - 1) * errors, desired_quantiles * errors) # element-wise max
+
+    # sum losses over quantiles and average across time and observations: scalar
+    return (losses_array.sum(dim=-1)).mean(dim=-1).mean()
