@@ -729,9 +729,6 @@ class SPCI_and_EnbPI():
                     resid_input_test_list[s][:,-idx_count] = predicted_residuals[:-s+step]
 
             compute_coverage_QGPT(prediction_interval_centers[(step+1):], Y_predict[(step+1):], output_arr, past_window+step, target_quantiles)
-        
-        return feature_input_test_list, resid_input_test_list, resid_prediction_test_list
-
 
     def plot_QGPT_multistep(self, model_dir, saving_dir, hyperparams_dict_dir, result_dict_dir, multistep, ylim, standardize=True):
     

@@ -15,11 +15,17 @@ The codes were written in Python 3.9.13. If you want to implement locally,
 
         pip install -r requirements.txt
 
-### Experiments
+### Experiments using Colab Notebook
 We also provide colab notebook for reproducing the results.
 
 #### Simulation: time series with heteroscedastic errors
 <a target="_blank" href="https://colab.research.google.com/github/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/model_monitoring/model_monitoring.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
+
+#### Simulation: time series with non-s errors
+<a target="_blank" href="https://colab.research.google.com/github/GoogleCloudPlatform/vertex-ai-samples/blob/main/notebooks/official/model_monitoring/model_monitoring.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
 
