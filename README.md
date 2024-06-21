@@ -21,14 +21,18 @@ The codes were written in Python 3.9.13. If you want to implement locally,
         pip install -r requirements.txt
 
 ### Experiments using Colab Notebook
-We also provide colab notebook for reproducing the results.
+We also provide colab notebook for reproducing the results. Note that results from colab notebook shows slightly different performance from the results in the paper.
 
 #### Simulation: time series with heteroscedastic errors
 <a target="_blank" href="https://colab.research.google.com/github/Jayaos/TCPTS/blob/main/examples/hetero_example.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-Conformal prediction on time series with heteroscedastic errors as described in Section 4.2 in the paper. Note that results from colab notebook shows slightly different performance from the results in the paper.
+Conformal prediction on time series with heteroscedastic errors as described in Section 4.2 in the paper.
 
-### Real Data Experiments
-Real data experiments are to be updated soon.
+#### Real Data Experiment: Electricity dataset
+<a target="_blank" href="https://colab.research.google.com/github/Jayaos/TCPTS/blob/main/examples/hetero_example.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+Conformal prediction on the electricity dataset in Section 4.3 in the paper.
