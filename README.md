@@ -23,14 +23,8 @@ The codes were written in Python 3.9.13. If you want to implement locally,
 ### Experiments using Colab Notebook
 We also provide colab notebook for reproducing the results.
 
-#### Simulation: non-stationary time series
-We conduct conformal prediction on non-stationary time series as described in Section 4.2 in the paper.
-<a target="_blank" href="https://colab.research.google.com/github/Jayaos/TCPTS/blob/main/examples/nonstat_example.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-
 #### Simulation: time series with heteroscedastic errors
-We conduct conformal prediction on time series with heteroscedastic errors as described in Section 4.2 in the paper.
+Conformal prediction on time series with heteroscedastic errors as described in Section 4.2 in the paper. Note that results from colab notebook shows slightly different performance from the results in the paper.
 <a target="_blank" href="https://colab.research.google.com/github/Jayaos/TCPTS/blob/main/examples/hetero_example.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
