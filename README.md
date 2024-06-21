@@ -31,7 +31,7 @@ We also provide colab notebook for reproducing the results. Note that results fr
 Conformal prediction on time series with heteroscedastic errors as described in Section 4.2 in the paper.
 
 #### Real Data Experiment: Electricity dataset
-<a target="_blank" href="https://colab.research.google.com/github/Jayaos/TCPTS/blob/main/examples/hetero_example.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/Jayaos/TCPTS/blob/main/examples/electricity_example.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
